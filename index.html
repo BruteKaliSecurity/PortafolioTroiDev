@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Alejandro Roque (Troi) - Desarrollador Web y Diseñador">
+    <meta name="keywords" content="portafolio, desarrollador web, diseño web, HTML, CSS, JavaScript">
+    <title>Portafolio - Alejandro Roque (Troi)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#inicio">Alejandro Roque (Troi)</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero/Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="name-prefix">Hola, soy</span><span class="name-space"> </span><span class="name-changing">Alejandro Roque</span>
+            </h1>
+            <p class="hero-subtitle">Dev en Blockchain, IA y Ciberseguridad</p>
+            <div class="hero-description">
+                <p>Combino mi experiencia técnica con mi formación en Filosofía para analizar críticamente las tecnologías emergentes y construir soluciones más seguras, éticas e inteligentes.</p>
+                <p>Transformo ideas complejas en sistemas confiables, escalables y diseñados para un futuro responsable.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-text-wrapper">
+                        <div class="about-text">
+                            <p>
+                                Soy un apasionado desarrollador web con experiencia en la creación de 
+                                sitios web modernos y funcionales. Me especializo en diseño responsivo 
+                                y experiencias de usuario intuitivas.
+                            </p>
+                            <p>
+                                Mi objetivo es combinar diseño atractivo con código limpio y eficiente, 
+                                creando soluciones que no solo se vean bien, sino que también funcionen 
+                                perfectamente en todos los dispositivos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2+</h3>
+                        <p>Años de Experiencia</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Dedicación</p>
+                    </div>
+                </div>
+                <div class="about-recognitions">
+                    <h3 class="recognitions-title">Reconocimientos</h3>
+                    <div class="recognitions-wrapper">
+                        <div class="recognitions-list">
+                            <div class="recognition-item">
+                                <div class="recognition-icon">🏆</div>
+                                <p>Ganador CTF Medellín 2023</p>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="recognition-icon">🏆</div>
+                                <p>Ganador de la Hackathon MinTIC Medellín 2025</p>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="recognition-icon">🏆</div>
+                                <p>Ganador Hackathon Google 2025</p>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="recognition-icon">🏆</div>
+                                <p>Ganador Hackathon FinHub EAFIT 2025</p>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="recognition-icon">🌟</div>
+                                <p>Participante IA Young Leaders</p>
+                            </div>
+                        </div>
+                        <div class="recognitions-gallery">
+                            <div class="gallery-container" id="gallery-container">
+                                <!-- Las imágenes se cargarán dinámicamente aquí -->
+                                <div class="gallery-placeholder">
+                                    <p>Imágenes de reconocimientos</p>
+                                </div>
+                            </div>
+                            <div class="gallery-indicators" id="gallery-indicators"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos ganadores en Hackatones.</h2>
+            <div class="projects-loading" id="projects-loading">
+                <p>Cargando proyectos desde GitHub...</p>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Los proyectos se cargarán dinámicamente desde GitHub -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">AI</div>
+                    <h3>Inteligencia Artificial</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <p>85%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">ML</div>
+                    <h3>Machine Learning</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <p>80%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">LLM</div>
+                    <h3>Modelos de Lenguaje (LLMs)</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="78"></div>
+                    </div>
+                    <p>78%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">BC</div>
+                    <h3>Desarrollo Blockchain</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="82"></div>
+                    </div>
+                    <p>82%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">SC</div>
+                    <h3>Smart Contracts (Solidity)</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <p>75%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">CYB</div>
+                    <h3>Ciberseguridad</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                    <p>88%</p>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">OSINT</div>
+                    <h3>OSINT & Ingeniería Social</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <p>90%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Hablemos!</h3>
+                    <p>Estoy disponible para nuevos proyectos y oportunidades. No dudes en contactarme.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>brutekalisec@proton.me</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+57 3243881352</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Medellín, Colombia</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/BruteKaliSecurity" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/troidev/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://www.instagram.com/girasolcallejero/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón Volver Arriba -->
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alejandro Roque (Troi). Todos los derechos reservados.</p>
+            <p>Hecho con ❤️ usando HTML, CSS y JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
